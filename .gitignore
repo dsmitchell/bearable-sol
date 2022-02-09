@@ -1,18 +1,25 @@
-node_modules
+#Logs
+yarn-debug.log*
+yarn-error.log*
+
+#Node files
 .env
-coverage
 coverage.json
-typechain
+dist/
+deployments/
+node_modules/
+typechain-types/
 
 #Hardhat files
-cache
-artifacts
-
-#yarn files
-yarn.lock
+cache/
+artifacts/
+coverage/
 
 #Mac files
 .DS_Store
 
 #VSCode files
 .vscode
+
+#yarn files
+yarn.lock
