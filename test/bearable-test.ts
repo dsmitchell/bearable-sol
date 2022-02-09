@@ -1,7 +1,7 @@
 import { expect } from "chai"
 import { ethers } from "hardhat"
 import { bearConfig } from '../hardhat.config'
-import { Bearable } from "../typechain-types"
+import { Bearable, TwoBitBears } from "../typechain-types"
 import { ISVGTypes } from "../typechain-types/IBearable"
 
 describe("Bearable", function () {
@@ -14,7 +14,8 @@ describe("Bearable", function () {
 		const Bearable = await ethers.getContractFactory("Bearable")
 		bearable = await Bearable.deploy(bearConfig.bearsContract.mainnet) as Bearable
 		await bearable.deployed()
-		anOwner = "0x164a3938ecE2518bB99be3648bD215ca36059377" //await bearable.ownerOf(0)
+		let twoBitBears = await ethers.getContractAt("TwoBitBears", bearConfig.bearsContract.mainnet) as TwoBitBears
+		anOwner = await twoBitBears.ownerOf(0)
 	})
 
 	it("Should returns correct ownsBear", async function () {
