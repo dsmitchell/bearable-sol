@@ -14,10 +14,10 @@ contract Goldilocks {
 	TwoBitBears internal immutable gen1Bears_;
 
 	/// Reference to the TwoBitCubs (Gen 2) contract
-	TwoBitCubs private immutable gen2Bears_;
+	TwoBitCubs internal immutable gen2Bears_;
 
 	/// Reference to the TwoBitBears Gen 3 contract
-	TwoBitBears3 private immutable gen3Bears_;
+	TwoBitBears3 internal immutable gen3Bears_;
 
 	/// Constructs the Goldilocks container contract that references the first 3 generations of TwoBitBears
 	/// @param twoBitBears The address of the O.G. TwoBitBears contract

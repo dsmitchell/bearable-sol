@@ -1,6 +1,6 @@
 {
 	"name": "@dsmitchell/bearable",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Solidity SDK for enabling smart contract features to TwoBitBear holders (a.k.a. Membears)",
 	"keywords": [
 		"solidity",
